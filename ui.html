@@ -1,0 +1,52 @@
+<html >
+<head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body onload="show()">
+ <div class="task">
+ <div class="input">
+ <form>
+  <p>
+    <label>
+    <input type="radio" name="selector" checked=true value="side_height_angle">
+    Сторона, высота и меньший угол
+    </label>
+    <label>
+      <input type="radio" name="selector" value="sides_angle">
+      Стороны и меньший угол
+    </label>
+    </p>
+  <input type="button" value="Показать" id="show_btn"
+  onClick="show()">
+  <p id="unknown">
+  </p>
+ <p>
+ <label>b =
+ <input type="number" id="b" min=1 max=200 onfocus="changeColor(this)">
+ </label>
+ </p>
+ <p>
+  <label>alpha =
+  <input type="number" id="alpha" min=1 max=200 onfocus="changeColor(this)">
+  </label>
+  </p>
+ <p>
+ Найти: <br>
+ <label><input type="checkbox" id="task1"> площадь</label></br>
+ <label><input type="checkbox" id="task2" > угол между диагоналями</label></br>
+ <label><input type="checkbox" id="task3"> периметр</label>
+ </p>
+ <p>
+ <input type="button" value="Вычислить"
+ onClick="calculate()">
+ <input type="reset" value="Очистить">
+ </p>
+ </form>
+ </div>
+ <div id="output">
+ </div>
+ </div>
+ <script src="logic.js"></script>
+ 
+</body>
